@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>S&B</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/display.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <div class="innerheader">
+        <div class="logocontainer">
+          <h1>S<span>&B</span></h1>
+        </div>
+        <ul class="navigation">
+        <button type="button" class="buttons" name="button">  <a href="/login" class="textc">Sign Out</a></button>
+        <button type="button" class="buttons" name="button">  <a href="/products" class="textc">View Products</a></button>
+        <button type="button" class="buttons" name="button">  <a href="/cart" class="textc">View Cart</a></button>
+        </ul>
+      </div>
+    </div>
+<center>
+  <br>
+    <h1><strong>Welcome <%= name %>!</strong></h1>
+    <p>Last visit: <%= firstVisit %> seconds ago</p><br>
+    <% if(isAdmin === true) {%>
+      <a href="/adminPanel"> adminPanel</a>
+    <%}%>
+    <h2>Check currency rate:</h2>
+    <form class=" " action="/currency" method="post">
+    <label>From</label>
+    <input type="text" name="from" placeholder="usd, eur, rub, etc.">
+    <label>To</label>
+    <input type="text" name="to" placeholder="usd, eur, rub, etc.">
+    <button type="submit" name="button" value="fetch-one">Get</button>
+    </form>
+  </center>
+  </body>
+</html>

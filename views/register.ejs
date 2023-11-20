@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Register S&B</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
+  <body>
+    <center>
+  <div class="register-form-container">
+    <h2 class="form-title">Registration form</h2>
+    <form class="" action="/register" method="post" onsubmit="return matchPassword()">
+      <table>
+        <div class="form-field">
+          <tr>
+            <td><label for=""></label></td>
+            <td><input type="text" name="name" placeholder="Enter your name"></td>
+          </tr>
+        </div>
+        <div class="form-field">
+          <tr>
+            <td><label for=""></label></td>
+            <td><input type="text" name="age" placeholder="Enter your age"></td>
+          </tr>
+        </div>
+        <div class="form-field">
+          <tr>
+            <td><label for=""></label></td>
+            <td><input type="text" name="email" placeholder="Enter your email"></td>
+          </tr>
+        </div>
+        <div class="form-field">
+          <tr>
+            <td><label for=""></label></td>
+            <td><input type="text" name="city" placeholder="Enter your city"></td>
+          </tr>
+        </div>
+        <div class="form-field">
+          <tr>
+            <td><label for=""></label></td>
+            <td><input type="password" name="password1" id = "psw1" placeholder="Enter password"></td>
+            <span id = message1 style="color:red"></span><br>
+          </tr>
+        </div>
+        <div class="form-field">
+          <tr>
+            <td><label for=""></label></td>
+            <td><input type="password" name="password2" id = "psw2" placeholder="Repeat password"></td>
+            <span id = message2 style="color:red"></span><br>
+          </tr>
+        </div>
+      </table>
+      <br>
+      <button type="submit" name="button" disabled class="submitForm" value="submit">Send</button><br>
+      <button type="reset" name="reset" class="button"value="reset">Reset</button><br>
+      <h4> <a href="/login">Login</a></h4>
+    </center>
+    </form>
+  </div>
+    <script>
+    const submitForm = document.querySelector('.submitForm')
+
+    let flag1 = false
+    let flag2 = false
+    var pswd1 = document.getElementById("psw1");
+    var pswd2 = document.getElementById("psw2");
+    pswd1.addEventListener('input', (event) => {
+      if(pswd1.value.length <= 7){
+        console.log('проверка')
+        document.getElementById("message1").textContent = "*Password length must be at least 8 characters*";
+        flag1 = false
+        return 1
+      }
+      document.getElementById("message1").textContent = "";
+      flag1 = true
+      if(flag1 && flag2){
+        submitForm.removeAttribute('disabled')
+      }
+    })
+    pswd2.addEventListener('input', (event) => {
+      if(pswd1.value !== pswd2.value){
+        document.getElementById("message2").textContent = "*Passwords do not match*";
+        flag2 = false
+
+        return 1
+      }
+      flag2 = true
+      document.getElementById("message2").textContent = "";
+      if(flag1 && flag2){
+        submitForm.removeAttribute('disabled')
+      }
+    })
+    </script>
+  </body>
+</html>

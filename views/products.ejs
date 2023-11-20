@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>S&B</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/display.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://checkout.stripe.com/checkout.js" defer></script>
+
+    <script>
+  var stripePublicKey='<%=stripePublicKey%>'    
+    </script>
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="innerheader">
+        <div class="logocontainer">
+          <h1>S<span>&B</span></h1>
+        </div>
+        <ul class="navigation">
+        <button type="button" class="buttonssignout" name="button"> <a href="/login" class="textc">Sign Out</a></button>
+        <button onclick="history.back()"class="buttons">Go Back</button>
+        </ul>
+      </div>
+    </div>
+  <% for(var i = 0, number = 1; i < allProds.length; i ++){ %>
+    <div class="wrapper">
+      <div class="card">
+        <img  class="card-img" src=<%=allProds[i].imgLink%> >
+        <div class="card-title"><%=allProds[i].productname %></div>
+          <div class="card-sub2"> <p class="weight">Price:  <%=allProds[i].price%> ₸</p></div>
+  <div class="card-sub">  <%=allProds[i].description%></div>
+        <div class="btn2-keeper">
+          <a class="btn2" href="#">Buy</a><br>
+          <form  action="/add-to-cart" method="post">
+            <input type="hidden" name="id" value="123">
+            <button type="submit" name="button">Add to Cart</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  <%}%>
+  </body>
+</html>

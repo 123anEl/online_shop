@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
+  <body>
+  <center>
+    <br>
+      <div class="register-form-container">
+<h1 class="form-title">Add product</h1>
+    <form  action="/addproduct" method="post">
+      <table>
+        <div class="form-field">
+          <tr>
+            <td><label for=""></label></td>
+            <td><input type="text" name="nameofproduct" placeholder="Name of the product"></td>
+          </tr>
+        </div>
+        <div class="form-field">
+          <tr>
+            <td><label for=""></label></td>
+            <td><input type="text" name="description" placeholder="Description"></td>
+          </tr>
+        </div>
+        <div class="form-field">
+          <tr>
+            <td> <label for="price"></label></td>
+            <td> <input type="number"  placeholder="Price" id="price" name="price" min="10000" max="10000000" step="10000" > ₸</td>
+          </tr>
+        </div>
+        <div class="form-field">
+          <tr>
+            <td><label for="quantity"></label></td>
+            <td><input type="number"  placeholder="Quantity" id="quantity" name="quantity" min="1" max="10000000" step="1" > </td>
+          </tr>
+        </div>
+        <div class="form-field">
+          <tr>
+            <td><label for="image"></label></td>
+            <td><input type="text" name="imgLink"placeholder="ImageLink"></td>
+          </tr>
+        </div>
+      </table><br>
+      <button type="submit" name="button" class="button">Upload</button>
+    </form>
+    </div>
+    </center>
+  </body>
+</html>

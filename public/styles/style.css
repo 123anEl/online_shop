@@ -1,0 +1,126 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main{
+  display: flex;
+  height: 100vh;
+
+}
+.textcolor{
+  color: white;
+}
+h1{
+  color:black;
+}
+.btn {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: #8C959D; /* Серый цвет фона */
+    color: #fff; /* Белый цвет текста */
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    border-radius: 3px; /* Скругляем уголки */
+   }
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.form-field{
+  margin-bottom: 13px;
+
+}
+.input:focus{
+  outline: none;
+  border: 2px solid #C1D9FD;
+}
+.register-form-container{
+  opacity: 0;
+  width: 35%;
+  background: #FFFFFF;
+  box-shadow: 0px 6px 50px rgba(217,229, 255, 0.7);
+  border-radius: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 38px;
+  padding-bottom: 38px;
+  animation-name: fadeForm;
+animation-duration: .7s;
+animation-timing-function: ease-ease-in-out;
+animation-delay: 0s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+}
+@keyframes fadeForm {
+0% {
+  opacity: 0;
+}
+25% {
+  opacity: .25;
+}
+50% {
+  opacity: .5;
+}
+75% {
+  opacity: .75;
+}
+100% {
+  opacity: 1;
+}
+}
+input{
+  width: 320px;
+  height: 45px;
+  max-width:400px;
+  font-size: 14px;
+  line-height: 16px;
+border:2px solid #E9F2FF;
+border-radius: 5px;
+padding-left: 25px;
+color: #3B5983;
+}
+.form-title{
+    font-weight: bold;
+  color:#30507D;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 10px;
+  margin-bottom: 35px;
+}
+.button:hover{
+  background-color: #0D6CF2;
+}
+.text{
+    font-weight: 600;
+    color: red;
+}
+.button{
+  height: 40px;
+  width: 320px;
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  height: 35px;
+  background: #247FFF;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+
+}
+.submitForm{
+  height: 40px;
+  width: 320px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  line-height: 30px;
+  height: 35px;
+  background: #247FFF;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+}

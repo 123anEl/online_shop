@@ -1,0 +1,32 @@
+{
+  {
+  "_id": {
+    "$oid": "62f2a8e7a514108938f2add1"
+  },
+  "productname": "Notebook3",
+  "description": "Laptop...",
+  "price": "400000",
+  "quantity": "1",
+  "imgLink": "https://www.technodom.kz/_next/image?url=https%3A%2F%2Fapi.technodom.kz%2Ff3%2Fapi%2Fv1%2Fimages%2F272%2F272%2F217156_1.webp&w=256&q=75"
+},
+{
+  "_id": {
+    "$oid": "62f36950939202cd258a9f04"
+  },
+  "productname": "Notebook3000",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+  "price": "350000",
+  "quantity": "1",
+  "imgLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy5VsemHjPt_hj36hgwWFprhoxX01g3jJEMA_IdOrokb-2MpzA49wL-_1VdlavI8khfo8&usqp=CAU"
+},
+{
+  "_id": {
+    "$oid": "62f391a9ca930773d28d969f"
+  },
+  "productname": "Laptop5000",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+  "price": "140000",
+  "quantity": "1",
+  "imgLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy5VsemHjPt_hj36hgwWFprhoxX01g3jJEMA_IdOrokb-2MpzA49wL-_1VdlavI8khfo8&usqp=CAU"
+}
+}
